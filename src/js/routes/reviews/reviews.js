@@ -1,5 +1,5 @@
 import express from "express";
-// import { fetchMovies, fetchMovie } from "../modules/fetchData.js";
+// import { fetchMovies, fetchMovie } from "../modules/reviews/fetchReviews.js";
 
 
 // LISTA REVIEWS
