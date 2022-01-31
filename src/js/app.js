@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
   res.render("home");
 });
 
-app.get("/api/moives/:movieId/reviews", reviewPageFilter)
+app.get("/api/movies/:movieId/reviews", reviewPageFilter)
 
 app.use("/movies", moviesRouter);
 
