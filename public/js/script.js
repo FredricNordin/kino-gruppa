@@ -65,7 +65,7 @@ function createReviewForm() {
     stopRefresh.preventDefault(); // Halt page refresh on submit.
     const ratingsConvert = ratingSelect.value.replace("⭐", "");
     const ratingsInteger = parseInt(ratingsConvert, 10);
-    
+
     const data = {
       author: nameInput.value,
       comment: commentInput.value,
@@ -79,5 +79,13 @@ function createReviewForm() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     });
+
+    // Clear input fields when done.
+    document.querySelector('#name-input').value = "";
+    document.querySelector('#comment-input').value = "";
+    document.querySelector('#rating-select').value = "1⭐";
+    
+    // Insert Marcus code here to call list of reviews again.
+    //
   });
 };
