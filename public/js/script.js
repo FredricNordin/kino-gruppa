@@ -25,7 +25,7 @@ function createReviewForm() {
 
   // Create a title.
   const reviewTitle = document.createElement("h1");
-  reviewTitle.innerText = 'Review this movie! 📽️💫'
+  reviewTitle.innerText = 'Review this movie! 🎬💫'
   reviewForm.appendChild(reviewTitle);
 
   // Create name input.
