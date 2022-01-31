@@ -58,26 +58,26 @@ function createReviewForm() {
 
   // Get movie ID
   const movieId = window.location.pathname.replace("/movies/", "");
-  console.log("Review form created for movie with ID: " + movieId);
+  console.log("Review form created for movie ID: " + movieId);
 
   // Submit review form
   reviewForm.addEventListener("submit", (stopRefresh) => {
     stopRefresh.preventDefault(); // Halt page refresh on submit.
+    const ratingsConvert = ratingSelect.value.replace("⭐", "");
+    const ratingsInteger = parseInt(ratingsConvert, 10);
     
-    
-  });
-}
+    const data = {
+      author: nameInput.value,
+      comment: commentInput.value,
+      rating: ratingsInteger,
+      movie: parseInt(movieId, 10),
+    };
 
-// fetch('https://lernia-kino-cms.herokuapp.com/api/reviews', {
-//     method: 'POST',
-//     mode: 'cors',
-//     headers: { 'Content-Type': 'application/json' },
-//     body: JSON.stringify({
-//         data: {
-//             author: 'Greger',
-//             comment: 'Bra film, frugan är nöjd också.',
-//             rating: 55,
-//             movie: 1,
-//         }
-//     }),
-// })
+    fetch("/api/movies/" + movieId + "/reviews/", {
+      method: "POST",
+      mode: "cors",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+  });
+};
