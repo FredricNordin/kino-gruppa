@@ -2,6 +2,8 @@ import express from "express";
 import { engine } from "express-handlebars";
 import { marked } from "marked";
 import moviesRouter from "./routes/movies.js";
+import reviewPageFilter from "./modules/reviews/movieReviewFilter.js"
+
 
 const app = express();
 
@@ -19,6 +21,8 @@ app.set("views", "./views");
 app.get("/", (req, res) => {
   res.render("home");
 });
+
+app.get("/api/moives/:movieId/reviews", reviewPageFilter)
 
 app.use("/movies", moviesRouter);
 
