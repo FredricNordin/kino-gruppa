@@ -6,7 +6,7 @@ async function getTotalJsonLength(uri) {
 
   if (jsonData.data === null) {
     return console.log(
-      `err: check if something is missing or wrong the the uri: ${uri} `
+      `err: check if something is missing or wrong with the uri: ${uri} `
     );
   }
 
@@ -15,7 +15,7 @@ async function getTotalJsonLength(uri) {
   //test -> json datan for inte vara null/undefined
 }
 
-export async function fetchAllMovieReviews(movieID) {
+export async function fetchMovieReviews(movieID) {
   let uri = `https://lernia-kino-cms.herokuapp.com/api/reviews?filters[movie]=${movieID}`;
   const totalLength = await getTotalJsonLength(uri);
   uri += `&pagination[pageSize]=${totalLength}`;
