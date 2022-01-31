@@ -2,6 +2,7 @@ import express from "express";
 import { engine } from "express-handlebars";
 import { marked } from "marked";
 import moviesRouter from "./routes/movies.js";
+// import REVIEWS from "./routes/reviews/reviews.js";
 
 const app = express();
 
