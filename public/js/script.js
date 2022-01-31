@@ -34,7 +34,7 @@ function createReviewForm() {
   ratingSelect.id = "rating-select";
   reviewForm.appendChild(ratingSelect);
 
-  // Create rating options. Min rating 0, Max rating 5.
+  // Create rating options. Min rating 1, Max rating 5.
   for (let i = 1; i <= 5; i++) {
     const optionRating = document.createElement("option");
     optionRating.textContent = [i] + "⭐".repeat(i);
