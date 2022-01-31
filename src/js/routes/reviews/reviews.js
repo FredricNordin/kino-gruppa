@@ -1,4 +1,4 @@
-import express from "express";
+// import express from "express";
 // import { fetchMovies, fetchMovie } from "../modules/reviews/fetchReviews.js";
 
 
@@ -32,4 +32,4 @@ import express from "express";
     // }
 //   });
 
-//   export default reviews;
+//   export default reviewsRouter;
