@@ -2,7 +2,7 @@ import express from "express";
 import { engine } from "express-handlebars";
 import { marked } from "marked";
 import moviesRouter from "./routes/movies.js";
-import reviews from "./routes/reviews/reviews.js";
+import apiRouter from "./routes/api.js"
 
 const app = express();
 
@@ -22,7 +22,11 @@ app.get("/", (req, res) => {
 });
 
 app.use("/movies", moviesRouter);
-app.use("/reviews", reviews);
+
+// API Router.
+app.use(express.json());
+app.use("/api", apiRouter);
+//
 
 app.use("/public", express.static("./public"));
 
