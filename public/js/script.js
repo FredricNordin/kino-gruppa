@@ -66,18 +66,32 @@ function createReviewForm() {
     const ratingsConvert = ratingSelect.value.replace("⭐", "");
     const ratingsInteger = parseInt(ratingsConvert, 10);
 
-    const data = {
-      author: nameInput.value,
-      comment: commentInput.value,
-      rating: ratingsInteger,
-      movie: parseInt(movieId, 10),
-    };
+    // const data = {
+    //   author: nameInput.value,
+    //   comment: commentInput.value,
+    //   rating: ratingsInteger,
+    //   movie: parseInt(movieId, 10),
+    // };
 
-    fetch("/api/movies/" + movieId + "/reviews/", {
-      method: "POST",
-      mode: "cors",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
+    // fetch("/api/movies/" + movieId + "/reviews/", {
+    //   method: "POST",
+    //   mode: "cors",
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify(data),
+    // });
+
+    fetch('/api/movies/' + movieId + '/reviews/', {
+        method: 'POST',
+        mode: 'cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            data: {
+                author: nameInput.value,
+                comment: commentInput.value,
+                rating: ratingsInteger,
+                movie: parseInt(movieId, 10),
+            }
+        }),
     });
 
     // Clear input fields when done.
