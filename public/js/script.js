@@ -1,5 +1,10 @@
 // LISTA REVIEWS
 // Marcus skriver sitt här
+import changePage from "./func/renderMovieReviews.js";
+
+if (window.location.pathname.match(/\/movies\/[0-9]+/gm)) {
+  changePage();
+}
 
 // SKICKA IN REVIEW
 // Fredric skriver sitt här
@@ -65,26 +70,26 @@ function createReviewForm() {
     const ratingsConvert = ratingSelect.value.replace("⭐", "");
     const ratingsInteger = parseInt(ratingsConvert, 10);
 
-    fetch('/api/movies/' + movieId + '/reviews/', {
-        method: 'POST',
-        mode: 'cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-            data: {
-                author: nameInput.value,
-                comment: commentInput.value,
-                rating: ratingsInteger,
-                movie: parseInt(movieId, 10),
-            }
-        }),
+    fetch("/api/movies/" + movieId + "/reviews/", {
+      method: "POST",
+      mode: "cors",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        data: {
+          author: nameInput.value,
+          comment: commentInput.value,
+          rating: ratingsInteger,
+          movie: parseInt(movieId, 10),
+        },
+      }),
     });
 
     // Clear input fields when done.
-    document.querySelector('#name-input').value = "";
-    document.querySelector('#comment-input').value = "";
-    document.querySelector('#rating-select').value = "1⭐";
-    
+    document.querySelector("#name-input").value = "";
+    document.querySelector("#comment-input").value = "";
+    document.querySelector("#rating-select").value = "1⭐";
+
     // Insert Marcus code here to call list of reviews again.
     //
   });
-};
+}
