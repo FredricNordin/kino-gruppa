@@ -19,7 +19,7 @@ apiRouter.post("/movies/:movieId/reviews", function (req, res) {
       verified: userVerified,
     };
     res.end();
-    return test(data);
+    return postReview(data);
   } else {
     console.log("Author not verified. Skipping post!");
     res.end();
