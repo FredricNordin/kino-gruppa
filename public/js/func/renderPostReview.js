@@ -75,7 +75,7 @@ export default function createReviewForm() {
     document.querySelector("#comment-input").value = "";
     document.querySelector("#rating-select").value = "1⭐";
 
-    //Re:create review list after 1000ms.
+    //Re:create review list after 500ms.
     setTimeout(() => {
       changePage();
     }, 500);
