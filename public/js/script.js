@@ -17,8 +17,8 @@ function createReviewForm() {
   // Create post review form.
   const reviewForm = document.createElement("form");
   reviewForm.className = "main-container-reviewform";
-  const mainContainer = document.querySelector(".main-container");
-  mainContainer.appendChild(reviewForm);
+  const reviewPostSection = document.querySelector("#review-post-section");
+  reviewPostSection.appendChild(reviewForm);
 
   // Create a title.
   const reviewTitle = document.createElement("h1");
