@@ -1,4 +1,8 @@
-export default function createElement(tagName, innerText = null, classList = null) {
+export default function createElement(
+  tagName,
+  innerText = null,
+  classList = null
+) {
   const newElement = document.createElement(String(tagName));
   if (innerText !== null) newElement.innerText = innerText;
 
