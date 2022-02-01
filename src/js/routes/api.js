@@ -11,7 +11,7 @@ apiRouter.post("/movies/:movieId/reviews", function (req, res) {
     typeof req.body.data.movie === "number"
   ) {
     const userVerified = true;
-    const data = {
+    const review = {
       author: req.body.data.author,
       comment: req.body.data.comment,
       rating: req.body.data.rating,
@@ -19,7 +19,7 @@ apiRouter.post("/movies/:movieId/reviews", function (req, res) {
       verified: userVerified,
     };
     res.end();
-    return postReview(data);
+    return postReview(review);
   } else {
     console.log("Author not verified. Skipping post!");
     res.end();
