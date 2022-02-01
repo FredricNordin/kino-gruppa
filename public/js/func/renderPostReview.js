@@ -1,4 +1,6 @@
+import changePage from "../func/renderMovieReviews.js";
 export default function createReviewForm() {
+
   // Create post review form.
   const reviewForm = document.createElement("form");
   reviewForm.className = "main-container-reviewform";
@@ -73,8 +75,6 @@ export default function createReviewForm() {
     document.querySelector("#name-input").value = "";
     document.querySelector("#comment-input").value = "";
     document.querySelector("#rating-select").value = "1⭐";
-
-    // Insert Marcus code here to call list of reviews again.
-    //
+    changePage(); // Run marcus code.
   });
 }
