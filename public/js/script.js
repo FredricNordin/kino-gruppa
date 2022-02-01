@@ -5,7 +5,7 @@ import createReviewForm from "./func/renderPostReview.js";
 
 if (window.location.pathname.match(/\/movies\/[0-9]+/gm)) {
   changePage();
-}
+};
 
 // SKICKA IN REVIEW
 // Fredric skriver sitt här
