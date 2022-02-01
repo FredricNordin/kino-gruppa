@@ -3,7 +3,6 @@
 
 // SKICKA IN REVIEW
 // Fredric skriver sitt här
-
 // Check if on index of /movies/*
 if (window.location.href.indexOf("movies/") > -1) {
   createReviewForm();
