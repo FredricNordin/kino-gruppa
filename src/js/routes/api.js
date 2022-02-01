@@ -1,4 +1,5 @@
 import express from "express";
+import postReview from "../modules/reviews/fetchPostReview.js"
 const apiRouter = express.Router();
 
 
@@ -17,8 +18,8 @@ apiRouter.post("/movies/:movieId/reviews", function (req, res) {
       movie: req.body.data.movie,
       verified: userVerified,
     };
-    console.log(data);
     res.end();
+    return test(data);
   } else {
     console.log("Author not verified. Skipping post!");
     res.end();
