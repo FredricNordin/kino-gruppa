@@ -2,7 +2,6 @@ import express from "express";
 import { engine } from "express-handlebars";
 import { marked } from "marked";
 import moviesRouter from "./routes/movies.js";
-import reviewPageFilter from "./modules/reviews/movieReviewFilter.js"
 import apiRouter from "./routes/api.js"
 
 const app = express();
@@ -22,7 +21,7 @@ app.get("/", (req, res) => {
   res.render("home");
 });
 
-app.get("/api/movies/:movieId/reviews", reviewPageFilter)
+
 
 app.use("/movies", moviesRouter);
 
