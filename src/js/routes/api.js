@@ -1,7 +1,7 @@
 import express from "express";
 const apiRouter = express.Router();
 
-// Listen for a post containing review data.
+
 apiRouter.post("/movies/:movieId/reviews", function (req, res) {
   // Check if request data fields are filled in correctly to verify the author.
   if (
