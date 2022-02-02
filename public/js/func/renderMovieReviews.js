@@ -1,21 +1,7 @@
 import createElement from "./createElements.js";
+import changePage from "./fetchAllApiReviews.js"; //change this to fetchAllApiReviews.js if you want un-verified reviews
 
-async function fetchNodeReviewPage(reviewPageNr = 1) {
-  const movieId = window.location.pathname.split("/");
-  const res = await fetch(
-    `../api/movies/${movieId[2]}/reviews?page=${reviewPageNr}`
-  );
-  const payload = await res.json();
-  return payload;
-}
-
-export default async function changePage(pageNr = 1) {
-  const obj = await fetchNodeReviewPage(pageNr);
-  renderComments(obj.data);
-  renderReviewPageBtns(obj.meta);
-}
-
-function renderComments(data) {
+export function renderComments(data) {
   const commentSect = document.querySelector("#review-comment-section");
   commentSect.innerHTML = "";
 
@@ -25,7 +11,9 @@ function renderComments(data) {
 
     /*text-elements*/
     //header
-    const commenetHeader = createElement("div", null, ["review-commenet-header"]);
+    const commenetHeader = createElement("div", null, [
+      "review-commenet-header",
+    ]);
     article.appendChild(commenetHeader);
     const author = createElement("b", review.attributes.author);
     commenetHeader.appendChild(author);
@@ -34,16 +22,27 @@ function renderComments(data) {
     //comment
     const comment = createElement("p", review.attributes.comment);
     article.appendChild(comment);
-
   });
 }
 
-function renderReviewPageBtns(meta) {
+export function renderReviewPageBtns(totalPages) {
   const btnSect = document.querySelector("#review-btn-section");
   btnSect.innerHTML = "";
-  for (let pageNr = 1; pageNr <= Number(meta.totalPages); pageNr++) {
+  for (let pageNr = 1; pageNr <= Number(totalPages); pageNr++) {
     const pageBtn = createElement("button", pageNr);
-    pageBtn.addEventListener("click", () => changePage(pageNr));
+    pageBtn.addEventListener("click", () => changePage(pageNr)); //här har vi ett problem
     btnSect.appendChild(pageBtn);
   }
 }
+
+/* ========= old render reveiew btns =============== */
+
+// export function renderReviewPageBtns(meta) {
+//   const btnSect = document.querySelector("#review-btn-section");
+//   btnSect.innerHTML = "";
+//   for (let pageNr = 1; pageNr <= Number(meta.totalPages); pageNr++) {
+//     const pageBtn = createElement("button", pageNr);
+//     pageBtn.addEventListener("click", () => changePage(pageNr));
+//     btnSect.appendChild(pageBtn);
+//   }
+// }

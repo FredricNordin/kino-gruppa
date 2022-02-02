@@ -1,9 +1,14 @@
 import express from "express";
+<<<<<<< HEAD
 import postReview from "../modules/reviews/fetchPostReview.js"
+=======
+import reviewPageFilter from "../modules/reviews/movieReviewFilter.js";
+>>>>>>> testingOfCommentReviews
 const apiRouter = express.Router();
 
 
 apiRouter.post("/movies/:movieId/reviews", function (req, res) {
+<<<<<<< HEAD
   // Check if request data fields are filled in correctly to verify the author.
   if (
     req.body.data.author != null &&
@@ -27,3 +32,12 @@ apiRouter.post("/movies/:movieId/reviews", function (req, res) {
 });
 
 export default apiRouter;
+=======
+  console.log(req.body.data);
+  res.end();
+});
+
+apiRouter.get("/movies/:movieId/reviews", reviewPageFilter);
+
+export default apiRouter;
+>>>>>>> testingOfCommentReviews
