@@ -1,10 +1,10 @@
 import express from "express";
-
 import postReview from "../modules/reviews/fetchPostReview.js"
 import reviewPageFilter from "../modules/reviews/movieReviewFilter.js";
+import { filterSingleScreenings } from "../modules/filterScreenings.js";
+import fetchFunc from "../modules/fetchData.js";
 
 const apiRouter = express.Router();
-
 
 apiRouter.post("/movies/:movieId/reviews", function (req, res) {
   // Check if request data fields are filled in correctly to verify the author.
@@ -30,6 +30,14 @@ apiRouter.post("/movies/:movieId/reviews", function (req, res) {
 });
 
 apiRouter.get("/movies/:movieId/reviews", reviewPageFilter);
+
+apiRouter.get("/movies/:movieId/screenings", async (req, res) => {
+  const screenings = await filterSingleScreenings(
+    req.params.movieId,
+    fetchFunc
+  );
+  res.send(screenings);
+});
 
 export default apiRouter;
 
