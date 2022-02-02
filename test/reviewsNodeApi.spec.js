@@ -1,5 +1,4 @@
 import app from "../src/js/app.js";
-import fetch from "node-fetch";
 import request from "supertest";
 
 
