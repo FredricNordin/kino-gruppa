@@ -1,6 +1,6 @@
 // LISTA REVIEWS
 // Marcus skriver sitt här
-import changePage from "./func/renderMovieReviews.js";
+import changePage from "./func/fetchVerifiedReviews.js"; //change this to fetchAllApiReviews.js if you want un-verified reviews
 
 if (window.location.pathname.match(/\/movies\/[0-9]+/gm)) {
   changePage();
