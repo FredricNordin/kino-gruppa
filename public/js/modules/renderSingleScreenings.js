@@ -2,7 +2,7 @@ import { fetchSingleScreenings } from "./fetchScreenings.js";
 
 export async function renderSingleScreenings(id) {
   const screenings = await fetchSingleScreenings(id);
-  const container = document.querySelector(".container-single-movie");
+  const container = document.querySelector(".right-container-content-calendar");
 
   screenings.forEach((screening) => {
     const newScreening = document.createElement("div");
