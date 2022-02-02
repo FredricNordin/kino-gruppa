@@ -35,6 +35,5 @@ export async function filterSingleScreenings(id) {
   });
 
   const jsonScreenings = JSON.stringify(filteredScreenings);
-  //console.log(jsonScreenings);
   return jsonScreenings;
 }
