@@ -2,7 +2,8 @@ import express from "express";
 import { engine } from "express-handlebars";
 import { marked } from "marked";
 import moviesRouter from "./routes/movies.js";
-import apiRouter from "./routes/api.js";
+import apiRouter from "./routes/api.js"
+
 
 const app = express();
 
@@ -20,6 +21,8 @@ app.set("views", "./views");
 app.get("/", (req, res) => {
   res.render("home");
 });
+
+
 
 app.use("/movies", moviesRouter);
 

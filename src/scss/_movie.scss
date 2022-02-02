@@ -1,5 +1,12 @@
+@import "./Values/sizes";
+
 .container-single-movie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   background-color: #fff;
+  width: $main-content-size;
 }
 
 .movie-title {
@@ -17,6 +24,47 @@
 }
 
 .movie-poster {
-  max-width: 575px;
+  max-width: $main-content-size;
   width: 100%;
+}
+
+#review-comment-section {
+
+  width: 90%;
+  padding: 0 10px;
+  article {
+    width: 100%;
+    border-bottom: 1px solid hsla(0, 0%, 0%, 0.2);
+    padding: 10px;
+    .review-commenet-header {
+      display: flex;
+      justify-content: space-between;
+      padding-right: 10px;
+      b {
+        font-size: 16px;
+      }
+      i {
+        font-size: 14px;
+        &::before {
+          font-weight: bold;
+          content: "Rating: ";
+        }
+      }
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+#review-btn-section{
+  display: flex;
+  justify-content: center;
+
+  padding: 15px 0;
+
+  button{
+    margin: 0 2.5px;
+  }
 }
