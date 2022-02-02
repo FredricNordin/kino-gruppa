@@ -1,5 +1,5 @@
 import createElement from "./createElements.js";
-import changePage from "./fetchAllApiReviews.js"; //change this to fetchAllApiReviews.js if you want un-verified reviews
+import changePage from "./fetchVerifiedReviews.js"; //change this to fetchAllApiReviews.js if you want un-verified reviews
 
 export function renderComments(data) {
   const commentSect = document.querySelector("#review-comment-section");

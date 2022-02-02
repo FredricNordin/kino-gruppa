@@ -1,4 +1,4 @@
-import changePage from "../func/renderMovieReviews.js";
+import changePage from "./fetchVerifiedReviews.js";
 export default function createReviewForm() {
   // Create post review form.
   const reviewForm = document.createElement("form");
