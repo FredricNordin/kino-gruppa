@@ -68,8 +68,6 @@ test("filter for coming screenings", async () => {
   const response = JSON.parse(payload);
   const foreverNow = new Date();
 
-  console.log(foreverNow);
-  console.log(payload);
   response.forEach((screening) => {
     const date = new Date(screening.attributes.start_time);
     expect(date > foreverNow).toBeTruthy();
