@@ -1,9 +1,5 @@
 import express from "express";
-import {
-  fetchMovies,
-  fetchMovie,
-  filterSingleScreenings,
-} from "../modules/fetchData.js";
+import { fetchMovies, fetchMovie } from "../modules/fetchData.js";
 
 const moviesRouter = express.Router();
 
@@ -23,12 +19,6 @@ moviesRouter.get("/:movieId", async (req, res) => {
   } else {
     res.status(404).render("movie404");
   }
-});
-
-moviesRouter.get("/:movieId/screenings", async (req, res) => {
-  console.log("get screenings");
-  const screenings = await filterSingleScreenings(req.params.movieId);
-  res.send(screenings);
 });
 
 export default moviesRouter;
