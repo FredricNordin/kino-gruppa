@@ -7,7 +7,7 @@ import fetchFunc from "../modules/fetchData.js";
 const apiRouter = express.Router();
 
 apiRouter.post("/movies/:movieId/reviews", function (req, res) {
-  // Check if request data fields are filled in correctly to verify the author.
+  // Check if request data fields are filled in correctly to validate the review.
   if (
     req.body.data.author != null &&
     typeof req.body.data.rating === "number" &&
