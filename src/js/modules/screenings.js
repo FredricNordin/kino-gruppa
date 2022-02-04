@@ -1,4 +1,4 @@
-import comingScreenings from "./screenings.js";
+import fetchFunc from "./fetchData.js";
 
 export async function comingScreenings(fetchFunc) {
   const now = new Date();
