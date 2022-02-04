@@ -1,11 +1,12 @@
 import fetchFunc from "./fetchData.js";
 
+// This JS file has a function to fetch the upcoming screenings from API server and filtering them
 export async function comingScreenings() {
   const now = new Date();
   const screenings = (await fetchFunc.fetchScreenings(`?populate=movie&pagination[pageSize]=1000`))
     .filter(obj => {
       const screeningTime = new Date(obj.attributes.start_time);
-      return screeningTime > now;
+      return screeningTime > now; // filter condition for screenings of start time greater than now time
     }).slice(0, 10);
   // screenings.filter(obj => {
   //   const screeningTime = new Date(obj.attributes.start_time);
@@ -13,8 +14,7 @@ export async function comingScreenings() {
   // });
   // screenings.slice(0, 20);
 
-  // console.log(now);
-
+  // Restructing the filtered screenings
   return {
     data: screenings.map(obj => {
       return {

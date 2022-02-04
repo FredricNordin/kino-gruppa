@@ -23,6 +23,7 @@ app.get("/", (req, res) => {
   res.render("home");
 });
 
+// Sending upcoming screenings to the browser at the page /api/screenings
 app.get("/api/screenings", async (req, res) => {
   res.json(await comingScreenings());
 });
