@@ -22,8 +22,7 @@ apiRouter.post("/movies/:movieId/reviews", function (req, res) {
     reviewApi.postReview(review);
     res.end();
   } else {
-    // Hitta lämplig status kod.
-    res.status(405);
+    res.status(400);
     res.end();
   }
 });
