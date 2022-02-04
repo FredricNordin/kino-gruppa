@@ -1,3 +1,5 @@
+import comingScreenings from "./screenings.js";
+
 export async function comingScreenings(fetchFunc) {
   const now = new Date();
   console.log(now);
