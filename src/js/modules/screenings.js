@@ -1,17 +1,20 @@
 import fetchFunc from "./fetchData.js";
 
-export async function comingScreenings(fetchFunc) {
+export async function comingScreenings() {
   const now = new Date();
-  console.log(now);
-  const screenings = (await fetchFunc.fetchScreenings(`?populate=movie`))
+  const screenings = (await fetchFunc.fetchScreenings(`?populate=movie&pagination[pageSize]=1000`))
     .filter(obj => {
       const screeningTime = new Date(obj.attributes.start_time);
-      return screeningTime > now; // && screeningTime <= now.setDate(now.getDate()+2); //(now.setHours(-1))+5);
-    })
-    .slice(0, 10);
-    now.setDate(now.getDate()+5);
-    console.log(now);
-  console.log(screenings);
+      return screeningTime > now;
+    }).slice(0, 10);
+  // screenings.filter(obj => {
+  //   const screeningTime = new Date(obj.attributes.start_time);
+  //   return screeningTime <= now.setDate(now.getDate() + 5);
+  // });
+  // screenings.slice(0, 20);
+
+  // console.log(now);
+
   return {
     data: screenings.map(obj => {
       return {
@@ -27,9 +30,12 @@ export async function comingScreenings(fetchFunc) {
       };
     }),
   };
-  }
+  // console.log(screenings);
+  // return screenings;
+}
 
-  
+
+
 // export async function comingScreenings(fetchFunc) {
 //   const today = new Date(); //.toISOString();
 //   /*const now= new Date().getTime();
@@ -47,3 +53,4 @@ export async function comingScreenings(fetchFunc) {
 //   return jsoncomingScreenings;
 // }
 
+export default comingScreenings;

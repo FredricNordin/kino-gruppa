@@ -23,6 +23,10 @@ app.get("/", (req, res) => {
   res.render("home");
 });
 
+app.get("/api/screenings", async (req, res) => {
+  res.json(await comingScreenings());
+});
+
 app.use("/movies", moviesRouter);
 
 // API Router.
@@ -30,9 +34,7 @@ app.use(express.json());
 app.use("/api", apiRouter);
 //
 
-app.get("/api/screenings", async (req, res) => {
-  res.json(await comingScreenings());
-});
+
 
 app.use("/public", express.static("./public"));
 
