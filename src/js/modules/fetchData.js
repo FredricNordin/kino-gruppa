@@ -1,5 +1,6 @@
 import fetch from "node-fetch";
 
+/* ========== code from old assignment ================= */
 export async function fetchMovies() {
   const response = await fetch(
     "https://lernia-kino-cms.herokuapp.com/api/movies"
@@ -15,15 +16,3 @@ export async function fetchMovie(id) {
   const data = await response.json();
   return data.data;
 }
-
-export async function fetchScreenings(qs) {
-  const response = await fetch(
-    `https://lernia-kino-cms.herokuapp.com/api/screenings${qs}`
-  );
-  const data = await response.json();
-  return data.data;
-}
-
-export default {
-  fetchScreenings,
-};

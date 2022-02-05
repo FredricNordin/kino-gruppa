@@ -1,8 +1,8 @@
 import express from "express";
 import reviewApi from "../modules/reviews/fetchPostReview.js"
 import reviewPageFilter from "../modules/reviews/movieReviewFilter.js";
-import { filterSingleScreenings } from "../modules/filterScreenings.js";
-import fetchFunc from "../modules/fetchData.js";
+import { filterSingleScreenings } from "../modules/screenings/filterScreenings.js";
+import fetchFunc from "../modules/screenings/fetchMovieScreenings.js";
 
 const apiRouter = express.Router();
 

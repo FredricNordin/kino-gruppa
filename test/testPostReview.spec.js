@@ -1,7 +1,7 @@
-import reviewApi from "../../src/js/modules/reviews/fetchPostReview.js"
+import reviewApi from "../src/js/modules/reviews/fetchPostReview.js"
 import { jest, expect, test } from '@jest/globals'
 import request from 'supertest';
-import app from "../../src/js/app.js";
+import app from "../src/js/app.js";
 
 test("Test if the posted review gets validated. Will respond Status 200 if OK.", async () => {
   const spy = jest.spyOn(reviewApi, "postReview");
