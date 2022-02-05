@@ -1,7 +1,9 @@
 export async function filterSingleScreenings(id, fetchFunc) {
   const today = new Date().toISOString();
 
-  const obj = await fetchFunc.fetchScreenings(`?filters[movie]=${id}`);
+  const obj = await fetchFunc.fetchScreenings(
+    `?filters[movie]=${id}&pagination[pageSize]=100`
+  );
   const filteredScreenings = [];
 
   obj.forEach((obj) => {
