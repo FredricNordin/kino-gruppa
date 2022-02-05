@@ -83,3 +83,33 @@ main {
         select {height: 2rem; order: 3;}
         button {height: 2rem; order: 4;}
 }
+
+.screening {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 480px;
+    width: 270px;
+  }
+  
+  .screening a {
+    display: block;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    text-decoration: none;
+  }
+  
+  .screening a span {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 4px;
+    bottom: 4px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    left: 4px;
+    padding: 4px 8px;
+   // position: absolute;
+    text-decoration: none;
+    display: block;
+  }

@@ -3,6 +3,7 @@ import { engine } from "express-handlebars";
 import { marked } from "marked";
 import moviesRouter from "./routes/movies.js";
 import apiRouter from "./routes/api.js"
+import comingScreenings from "./modules/screenings.js";
 
 
 const app = express();
@@ -22,7 +23,10 @@ app.get("/", (req, res) => {
   res.render("home");
 });
 
-
+// Sending upcoming screenings to the browser at the page /api/screenings
+app.get("/api/screenings", async (req, res) => {
+  res.json(await comingScreenings());
+});
 
 app.use("/movies", moviesRouter);
 
@@ -30,6 +34,8 @@ app.use("/movies", moviesRouter);
 app.use(express.json());
 app.use("/api", apiRouter);
 //
+
+
 
 app.use("/public", express.static("./public"));
 
