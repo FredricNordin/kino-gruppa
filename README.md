@@ -33,7 +33,7 @@ SCRUM is used to plan the group work.
 | **Screeings** Api route | Description | verb |
 | ----------------------------------- | --------------------------------------------- | ---- |
 | ----------------------------------- | --------------------------------------------- | ---- |
-| /api/screenings | Get 10 upcoming screenings | GET |
+| /api/screenings?populate=movie&pagination[pageSize]=1000 | Get upcoming screenings | GET |
 
 
 ## Rest API assignment retrospective:
