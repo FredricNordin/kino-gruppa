@@ -180,6 +180,7 @@ main {
   height: 100%;
   position: relative;
   width: 100%;
+  text-decoration: none;
 }
 
 .screening a span {
@@ -191,8 +192,8 @@ main {
   font-weight: bold;
   left: 4px;
   padding: 4px 8px;
-  position: absolute;
   text-decoration: none;
+  display: block;
 }
 
 .right-container {
