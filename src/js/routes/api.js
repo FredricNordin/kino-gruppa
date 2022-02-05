@@ -1,5 +1,5 @@
 import express from "express";
-import postReview from "../modules/reviews/fetchPostReview.js"
+import reviewApi from "../modules/reviews/fetchPostReview.js"
 import reviewPageFilter from "../modules/reviews/movieReviewFilter.js";
 import { filterSingleScreenings } from "../modules/filterScreenings.js";
 import fetchFunc from "../modules/fetchData.js";
@@ -7,24 +7,22 @@ import fetchFunc from "../modules/fetchData.js";
 const apiRouter = express.Router();
 
 apiRouter.post("/movies/:movieId/reviews", function (req, res) {
-  // Check if request data fields are filled in correctly to verify the author.
+  // Check if request data fields are filled in correctly to validate the review.
   if (
     req.body.data.author != null &&
     typeof req.body.data.rating === "number" &&
     typeof req.body.data.movie === "number"
   ) {
-    const userVerified = true;
     const review = {
       author: req.body.data.author,
       comment: req.body.data.comment,
       rating: req.body.data.rating,
       movie: req.body.data.movie,
-      verified: userVerified,
     };
+    reviewApi.postReview(review);
     res.end();
-    return postReview(review);
   } else {
-    console.log("Author not verified. Skipping post!");
+    res.status(400);
     res.end();
   }
 });
