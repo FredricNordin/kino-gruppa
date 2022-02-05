@@ -12,7 +12,7 @@ John
 
 Ort (city): Luleå
 
-#Rest API assignment retrospective:
+# Rest API assignment retrospective:
 
 Vi har haft bra löpande kommunikation, framförallt genom Discord.
 Det har dock varit svårt ibland att få till mötestider som passar alla.
