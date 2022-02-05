@@ -14,6 +14,45 @@ SCRUM is used to plan the group work.
 
 **Ort (city)**: Luleå
 
+## API Documentation:
+
+ROUTE MOVIES:
+
+GET:
+
+/api/movies/:movieId/reviews
+
+Get all reviews for specific movie
+
+/api/movies/:movieId/reviews?page=X
+
+Get  only 5 reviews from a specific movieId
+
+/api/movies/:movieId/screenings
+
+Get all screenings for specific movie
+
+/api/movies/:movieId/reviews?rating
+
+Get the movie average rating
+
+
+POST:
+
+/api/movies/:movieId/reviews
+
+Post review for specific movie
+
+
+ROUTE SCREENINGS:
+
+GET:
+
+/api/screenings
+
+Get 10 upcoming screenings
+
+
 ## Rest API assignment retrospective:
 
 Vi har haft bra löpande kommunikation, framförallt genom Discord.
