@@ -1,3 +1,5 @@
+## About the asignment:
+
 "A school group project where we will create a website for a company that has a number of cinemas around Sweden.
 The task is to create a website that represents the cinema in the new location that the cinema has chosen to open up.
 SCRUM is used to plan the group work.
@@ -12,7 +14,7 @@ SCRUM is used to plan the group work.
 
 Ort (city): Luleå
 
-# Rest API assignment retrospective:
+## Rest API assignment retrospective:
 
 Vi har haft bra löpande kommunikation, framförallt genom Discord.
 Det har dock varit svårt ibland att få till mötestider som passar alla.
