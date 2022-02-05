@@ -5,6 +5,9 @@ test("show landing page when requested", async () => {
   const response = await request(app).get("/").expect(200);
 
   expect(response.text.includes("<title>Kino Luleå</title>")).toBeTruthy();
+  // test some upcoming screenings on the home page
+  expect(response.text.includes('The Dark Knight')).toBeTruthy();
+  expect(response.text.includes('12 Angry Men')).toBeTruthy();
 });
 
 // This test will fail if the API removes this specific movie
