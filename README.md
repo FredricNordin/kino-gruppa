@@ -16,6 +16,8 @@ SCRUM is used to plan the group work.
 
 ## API Documentation:
 
+### MOVIES
+
 | **Movies** Api route | Description | verb |
 | ----------------------------------- | --------------------------------------------- | ---- |
 | ----------------------------------- | --------------------------------------------- | ---- |
@@ -26,7 +28,7 @@ SCRUM is used to plan the group work.
 | ----------------------------------- | --------------------------------------------- | ---- |
 | /api/movies/:movieId/reviews | Post review for specific movie| POST |
 
-
+### SCREENINGS
 
 | **Screeings** Api route | Description | verb |
 | ----------------------------------- | --------------------------------------------- | ---- |
