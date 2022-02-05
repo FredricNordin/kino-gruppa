@@ -22,10 +22,11 @@ SCRUM is used to plan the group work.
 | /api/movies/:movieId/screenings | Get all screenings for specific movie | GET |
 | /api/movies/:movieId/reviews?page=X | Get  only 5 reviews from a specific movieId | GET |
 | /api/movies/:movieId/reviews?rating | Get the movie average rating | GET |
-| :----------------------------------- | :---------------------------------------------: | ----: |
+| ----------------------------------- | --------------------------------------------- | ---- |
 | /api/movies/:movieId/reviews | Post review for specific movie| POST |
 
-:
+
+
 | **Screeings** Api route | Description | verb |
 | :----------------------------------- | :---------------------------------------------: | ----: |
 | /api/screenings | Get 10 upcoming screenings | GET |
