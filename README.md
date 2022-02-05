@@ -12,7 +12,7 @@ SCRUM is used to plan the group work.
 - Fredric
 - John
 
-Ort (city): Luleå
+**Ort (city)**: Luleå
 
 ## Rest API assignment retrospective:
 
