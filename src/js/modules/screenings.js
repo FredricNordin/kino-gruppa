@@ -1,4 +1,4 @@
-import fetchFunc from "./fetchData.js";
+import fetchFunc from "../modules/screenings/fetchMovieScreenings.js";
 
 // This JS file has a function to fetch the upcoming screenings from API server and filtering them
 export async function comingScreenings() {

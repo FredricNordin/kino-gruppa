@@ -1,5 +1,4 @@
-import createElement from "./createElements.js"
-import { renderComments, renderReviewPageBtns } from "./renderMovieReviews.js"
+import { renderComments, renderReviewPageBtns } from "./renderMovieReviews.js";
 
 async function fetchNodeReviewPage() {
   const movieId = window.location.pathname.split("/");
@@ -8,8 +7,9 @@ async function fetchNodeReviewPage() {
   return payload;
 }
 
-export default async function changePage( _pageNr = 1) {
-  const allReviews = await fetchNodeReviewPage();
+//filter out every verified review to an new array
+export async function allVerifedReviews(data = fetchNodeReviewPage) {
+  const allReviews = await data();
 
   let verfiedReviews = [];
   allReviews.data.forEach((review) => {
@@ -17,12 +17,18 @@ export default async function changePage( _pageNr = 1) {
     verfiedReviews.push(review);
   });
 
+  return verfiedReviews;
+}
+
+export default async function changePage(_pageNr = 1) {
+  const verfiedReviews = await allVerifedReviews();
+
   //filter logic
   const pageLimit = 5;
   const pageNr = _pageNr; //getPageNr; //lös denna senare
   const pageStart = (pageNr - 1) * pageLimit; //- 1 to get index with base 0
   const pageEnd = pageStart + pageLimit;
-  
+
   //filtration
   let filteredReviews = { data: [], meta: {} };
   verfiedReviews.forEach((review) => {
@@ -38,7 +44,6 @@ export default async function changePage( _pageNr = 1) {
     totalPages: Math.ceil(verfiedReviews.length / pageLimit),
   };
 
- renderComments(filteredReviews.data);
- renderReviewPageBtns(filteredReviews.meta.totalPages)
+  renderComments(filteredReviews.data);
+  renderReviewPageBtns(filteredReviews.meta.totalPages);
 }
-

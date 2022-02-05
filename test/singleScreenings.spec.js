@@ -1,4 +1,4 @@
-import { filterSingleScreenings } from "../../src/js/modules/filterScreenings.js";
+import { filterSingleScreenings } from "../src/js/modules/screenings/filterScreenings.js";
 
 // Mock fetchScreenings
 const fetchFunc = {

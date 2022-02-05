@@ -1,5 +1,5 @@
 import { jest } from "@jest/globals";
-import comingScreenings from "../../src/js/modules/screenings.js";
+import comingScreenings from "../src/js/modules/screenings.js";
 
 beforeEach(() => {
   // Fake the date to 2022-02-05 when running tests

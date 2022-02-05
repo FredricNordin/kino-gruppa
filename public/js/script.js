@@ -2,8 +2,9 @@
 // Marcus && John && fredric was here
 import createReviewForm from "./func/renderPostReview.js";
 import changePage from "./func/fetchVerifiedReviews.js"; //change this to fetchAllApiReviews.js if you want un-verified reviews
-import { renderSingleScreenings } from "./modules/renderSingleScreenings.js";
-import { renderNextScreenings } from "./modules/renderNextScreenings.js";
+import { renderNextScreenings } from "./func/renderNextScreenings.js";
+import { renderSingleScreenings } from "./func/renderSingleScreenings.js";
+
 
 if (window.location.pathname == "/") {
   renderNextScreenings();
@@ -12,4 +13,5 @@ if (window.location.pathname == "/") {
   renderSingleScreenings(movieId[2]);
   changePage();
   createReviewForm();
-}
+};
+
