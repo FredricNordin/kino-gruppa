@@ -295,3 +295,31 @@ body {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+.screening {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 480px;
+  width: 270px;
+}
+
+.screening a {
+  display: block;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.screening a span {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 4px;
+  bottom: 4px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  left: 4px;
+  padding: 4px 8px;
+  position: absolute;
+  text-decoration: none;
+}
