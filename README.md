@@ -2,13 +2,13 @@
 The task is to create a website that represents the cinema in the new location that the cinema has chosen to open up.
 SCRUM is used to plan the group work.
 
-Group A Participants:
-Lina
-Ammar
-Karim
-Marcus
-Fredric
-John
+**Group A Participants**:
+- Lina
+- Ammar
+- Karim
+- Marcus
+- Fredric
+- John
 
 Ort (city): Luleå
 
