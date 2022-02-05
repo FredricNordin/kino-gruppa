@@ -16,41 +16,19 @@ SCRUM is used to plan the group work.
 
 ## API Documentation:
 
-ROUTE MOVIES:
+| **Movies** Api route | Description | verb |
+| :----------------------------------- | :---------------------------------------------: | ----: |
+| /api/movies/:movieId/reviews | Get all reviews for specific movie | GET |
+| /api/movies/:movieId/screenings | Get all screenings for specific movie | GET |
+| /api/movies/:movieId/reviews?page=X | Get  only 5 reviews from a specific movieId | GET |
+| /api/movies/:movieId/reviews?rating | Get the movie average rating | GET |
+| :----------------------------------- | :---------------------------------------------: | ----: |
+| /api/movies/:movieId/reviews | Post review for specific movie| POST |
 
-GET:
-
-/api/movies/:movieId/reviews
-
-Get all reviews for specific movie
-
-/api/movies/:movieId/reviews?page=X
-
-Get  only 5 reviews from a specific movieId
-
-/api/movies/:movieId/screenings
-
-Get all screenings for specific movie
-
-/api/movies/:movieId/reviews?rating
-
-Get the movie average rating
-
-
-POST:
-
-/api/movies/:movieId/reviews
-
-Post review for specific movie
-
-
-ROUTE SCREENINGS:
-
-GET:
-
-/api/screenings
-
-Get 10 upcoming screenings
+:
+| **Screeings** Api route | Description | verb |
+| :----------------------------------- | :---------------------------------------------: | ----: |
+| /api/screenings | Get 10 upcoming screenings | GET |
 
 
 ## Rest API assignment retrospective:
@@ -65,6 +43,8 @@ Det största problemet för nästan alla i gruppen har varit testandet. Mest fö
 
 Vi har gott samarbete i gruppen, och hjälper glatt varandra när frågor ställs.
 
-Figma link: "https://www.figma.com/file/hwAMfoHaiLQgxCkEvLuuoA/KinoRestUppgift?node-id=0%3A1"
 
-Trello link: "https://trello.com/b/63vmxs4r/kanban-kino"
+### resources
+[Figma Link](https://www.figma.com/file/hwAMfoHaiLQgxCkEvLuuoA/KinoRestUppgift?node-id=0%3A1)
+[Trello Linkn](https://trello.com/b/63vmxs4r/kanban-kino)
+
