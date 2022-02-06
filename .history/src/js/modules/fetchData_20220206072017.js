@@ -18,9 +18,9 @@ export async function fetchMovie(id) {
 }
 
 
-export async function fetchRating(id) {
+export async function f(id) {
   const response = await fetch(
-    `https://lernia-kino-cms.herokuapp.com/api/reviews?filters[movie]=${id}&populate=movie`
+    `https://lernia-kino-cms.herokuapp.com/api/movies/${id}`
   );
   const data = await response.json();
   return data.data;
