@@ -1,4 +1,4 @@
-import  fetchMovieReviews  from "../fetchReviews";
+import  fetchMovieReviews  from "../fetchRe";
 export async function filterRating(id, fetchFunc, title) {
   const obj = await fetchFunc.fetchRating(`${id}`);
   let movieRating = 0;
