@@ -1,11 +1,12 @@
 @import "./header";
 @import "./mainContent";
+@import "./homePage";
 @import "./rightContent";
 @import "./footer";
 @import "./movies";
 @import "./movie";
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;

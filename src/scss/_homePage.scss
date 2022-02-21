@@ -1,0 +1,49 @@
+.hero-ad-container {
+  width: $main-content-size;
+  img {
+    width: 100%;
+  }
+  margin-bottom: 15px;
+}
+
+.main-container-content-article-small {
+  margin-bottom: 13px;
+  // width: $main-content-size;
+  width: 100%;
+
+  img {
+    width: 100%;
+  }
+
+  @media screen and (max-width: $tablet) {
+    width: 100%;
+  }
+}
+
+.screening {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 480px;
+  width: 270px;
+  a {
+    display: block;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    text-decoration: none;
+    span {
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 4px;
+      bottom: 4px;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      left: 4px;
+      padding: 4px 8px;
+      // position: absolute;
+      text-decoration: none;
+      display: block;
+    }
+  }
+}
