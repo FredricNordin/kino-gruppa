@@ -1,9 +1,7 @@
 @import "./Values/sizes";
 
 .right-container {
-  order: 3;
-  width: 100%;
-  max-width: 315px;
+  width: 315px;
   @media screen and (max-width: $desktop) {
     display: none;
   }

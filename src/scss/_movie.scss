@@ -1,36 +1,49 @@
 @import "./Values/sizes";
+@import "./Values/font-sizes";
+@import "./Values/color";
 
 .container-single-movie {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  // align-items: center;
 
-  background-color: #fff;
+  background-color: $main-bg-color;
   width: $main-content-size;
 }
 
-.movie-title {
-  font-size: 2rem;
-  text-align: center;
-  text-decoration: underline;
+.movie-info-container {
+  .movie-poster {
+    max-width: $main-content-size;
+    width: 300px;
+    // width: 100%;
+  }
 
-  margin: 0;
-  padding: 1rem 0;
-}
+  display: flex;
+  height: 400px;
 
-.movie-intro {
-  font-size: 1.2rem;
-  margin: 0.5rem 0.6rem;
-}
+  div.text-container {
+    padding: 0 25px;
 
-.movie-poster {
-  max-width: $main-content-size;
-  width: 100%;
+    .movie-title {
+      font-size: 2rem;
+      margin: 0;
+      padding: 1rem 0;
+    }
+
+    .movie-intro {
+      font-size: $normal-font;
+      width: 450px;
+
+      p {
+        padding: 0 0 15px 0;
+      }
+    }
+  }
+  margin-bottom: 20px;
 }
 
 #review-comment-section {
-
-  width: 90%;
+  width: 100%;
   padding: 0 10px;
   article {
     width: 100%;
@@ -58,13 +71,13 @@
   }
 }
 
-#review-btn-section{
+#review-btn-section {
   display: flex;
   justify-content: center;
 
   padding: 15px 0;
 
-  button{
+  button {
     margin: 0 2.5px;
   }
 }

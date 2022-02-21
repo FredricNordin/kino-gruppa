@@ -1,115 +1,123 @@
 @import "./Values/sizes";
 
 main {
-    width: 100%;
-    max-width: $desktop;
-    height: auto;
-    margin: 17px auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  background-color: $main-bg-color;
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  min-height: 75vh;
+  padding: 20px 10%;
 }
 
 .main-container {
-    order: 1;
-    width: 100%;
-    max-width: $main-content-size;
+  img {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  @media screen and (max-width: $desktop) {
+    max-width: 100%;
     img {
-
-        &:hover {
-            opacity: 0.7;
-        }   
-        
+      object-fit: contain;
+      width: 100%;
     }
-    @media screen and (max-width: $desktop) {
-          max-width: 100%;
-          img {
-              object-fit: contain;
-              width: 100%;
-          }
-    }
+  }
 }
 
 .main-container-content-article-small {
-    margin-bottom: 13px;
-    width: $main-content-size;
+  margin-bottom: 13px;
+  // width: $main-content-size;
+  width:100%;
 
-    img{
-      width: 100%;
-    }
+  img {
+    width: 100%;
+  }
 
-    
-    @media screen and (max-width: $tablet) {
-        width: 100%;
-    }
+  @media screen and (max-width: $tablet) {
+    width: 100%;
+  }
 }
 
 .main-container-content-article-large {
-    margin-bottom: 13px;
-    width: $main-content-size;
-    
-    @media screen and (max-width: $tablet) {
-        width: 100%;
-    }
+  margin-bottom: 13px;
+  width: $main-content-size;
+
+  @media screen and (max-width: $tablet) {
+    width: 100%;
+  }
 }
 
 .main-container-content-movie-comingsoon {
-    margin-bottom: 13px;
-    width: $main-content-size;
-    
-    @media screen and (max-width: $tablet) {
-        width: 100%;
-    }
+  margin-bottom: 13px;
+  width: $main-content-size;
+
+  @media screen and (max-width: $tablet) {
+    width: 100%;
+  }
 }
 
 .main-container-content-movie-availablenow {
-    margin-bottom: 13px;
-    width: $main-content-size;
-    
-    @media screen and (max-width: $tablet) {
-        width: 100%;
-    }
+  margin-bottom: 13px;
+  width: $main-content-size;
+
+  @media screen and (max-width: $tablet) {
+    width: 100%;
+  }
 }
 
 .main-container-reviewform {
-    background-color: white;
-    height: 10rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  background-color: white;
+  height: 10rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 
-        h1 {width: 100%; margin-left: 1rem; order: 1;}
-        input {height: 2rem; order: 2;}
-        select {height: 2rem; order: 3;}
-        button {height: 2rem; order: 4;}
+  h1 {
+    width: 100%;
+    margin-left: 1rem;
+    order: 1;
+  }
+  input {
+    height: 2rem;
+    order: 2;
+  }
+  select {
+    height: 2rem;
+    order: 3;
+  }
+  button {
+    height: 2rem;
+    order: 4;
+  }
 }
 
 .screening {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 480px;
-    width: 270px;
-  }
-  
-  .screening a {
-    display: block;
-    height: 100%;
-    position: relative;
-    width: 100%;
-    text-decoration: none;
-  }
-  
-  .screening a span {
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 4px;
-    bottom: 4px;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    left: 4px;
-    padding: 4px 8px;
-   // position: absolute;
-    text-decoration: none;
-    display: block;
-  }
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 480px;
+  width: 270px;
+}
+
+.screening a {
+  display: block;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  text-decoration: none;
+}
+
+.screening a span {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 4px;
+  bottom: 4px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  left: 4px;
+  padding: 4px 8px;
+  // position: absolute;
+  text-decoration: none;
+  display: block;
+}

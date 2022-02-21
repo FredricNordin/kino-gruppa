@@ -1,75 +1,92 @@
 @import "./Values/sizes";
+@import "./Values/color";
+@import "./Values/font-sizes";
 
 header {
-    width: 100%;
-    max-width: $desktop;
+  background-color: $main-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    margin: 0 auto;
-}
+  height: 10vh;
+  padding: 0 10%;
 
-.header-logo-container {
-    width: 100%;
-    max-width: 600px;
-    margin: 35px auto;
-}
-
-.menu-container {
-    width: 100%;
-    max-width: $desktop;
-    height: 25px;
-    padding-top: 1px;
-    background-color: #e8b1b0;
-    margin: 0 auto;
+  nav {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
+    height: 90%;
+    width: 60%;
+  }
 }
 
-.menu-link {
-    font-size: 16px;
-    letter-spacing: 1px;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
+header nav {
+  .utilites-header {
+    display: flex;
+    justify-content: flex-end;
+
+    margin-bottom: 10px;
+    li {
+      display: flex;
+      align-items: center;
+      color: rgb(216, 216, 216);
+      list-style: none;
+      width: fit-content;
+    }
+    li a {
+      height: 100%;
+      width: 100%;
+      color: inherit;
+      text-decoration: none;
+
+      font-size: $nav-font-utilites;
+      font-weight: lighter;
+    }
+  }
 }
 
-.menu-dropdown {
-    position: relative;
-    display: inline-block;
+header nav {
+  .page-navigation-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 25px;
+
+    width: 100%;
+    height: 25%;
+
+    li {
+      display: flex;
+      align-items: center;
+      color: white;
+      list-style: none;
+      width: fit-content;
+    }
+
+    li a {
+      height: 100%;
+      width: 100%;
+      color: inherit;
+      text-decoration: none;
+      font-size: $nav-font-normal;
+    }
+  }
 }
 
-.menu-dropdown-content {
-    display: none;
-    position: absolute;
-    border-style: solid;
-    min-width: max-content;
-    border-width: 1px;
-    background-color: #e8b1b0dc;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-        a {
-            color: black;
-            padding: 5px 10px;
-            font-size: 14px;
-            font-weight: bold;
-            text-decoration: none;
-            display: block;
-            &:hover {
-            background-color: #f1f1f144
-            }
-        }
-}
+// header nav {
+//   .breadcrums-header {
+//   }
+// }
 
-.menu-dropdown:hover .menu-dropdown-content {
-    display: block;
+#header-logo-container {
+  width: 20%;
+
+  a,
+  a img {
+    width: 100%;
+  }
 }
 
 .hero-ad-container {
-    margin-top: 20px;
-    width: 100%;
-    max-width: $desktop;
-    height: 200px;
-    background-color: rgba(219, 219, 219, 0.500);
+  display: none;
 }

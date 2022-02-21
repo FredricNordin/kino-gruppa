@@ -14,50 +14,60 @@
 
   <body>
     <header>
-      <nav>
         <!-- Logo image -->
-        <div class="header-logo-container">
+        <div id="header-logo-container">
           <a href="/"><img src="/public/img/logo.png" alt="logo image" /></a>
         </div>
 
+      <nav>
         <!-- Navigation menu -->
-        <div class="menu-container">
-          <div class="menu-dropdown">
+        <ul class="utilites-header">
+          <li> <a href="#"> sign in</a></li>
+        </ul>
+        {{!-- page-navigation --}}
+        <ul class="page-navigation-header">
+          <li class="menu-dropdown">
             <a class="menu-link" href="/movies">FILMER</a>
-          </div>
+          </li>
 
-          <div class="menu-dropdown">
+          <li class="menu-dropdown">
             <a class="menu-link" href="#">LIVE PÅ BIO</a>
-          </div>
+          </li>
 
-          <div class="menu-dropdown">
+          <li class="menu-dropdown">
             <a class="menu-link" href="#">BARNBIO</a>
-          </div>
+          </li>
 
-          <div class="menu-dropdown">
+          <li class="menu-dropdown">
             <a class="menu-link" href="#">EVENEMANG</a>
-          </div>
+          </li>
 
-          <div class="menu-dropdown">
+          <li class="menu-dropdown">
             <a class="menu-link" href="#">BILJETTER</a>
-          </div>
+          </li>
 
-          <div class="menu-dropdown">
+          <li class="menu-dropdown">
             <a class="menu-link" href="#">OM OSS</a>
-          </div>
+          </li>
 
-          <div class="menu-dropdown">
+          <li class="menu-dropdown">
             <a class="menu-link" href="#">IN ENGLISH</a>
-          </div>
-        </div>
+          </li>
+        </ul>
+        {{!-- breadcrums --}}
+        <ul class="breadcrums-header">
+          
+        </ul>
+      </nav>
 
         <!-- Movie advert -->
         <div class="hero-ad-container">
           <!-- <p>Movie advertisements 1100x200px</p> -->
           <img src="../public/img/banner1.jpg" alt="banner1" />
         </div>
-      </nav>
     </header>
+
+
     <main>
       <!-- Middle - Main content -->
       <div class="main-container">
@@ -76,6 +86,7 @@
         <div class="right-container-content-calendar">
         </div>
       </div>
+      
     </main>
 
     <!-- Footer -->

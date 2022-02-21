@@ -5,11 +5,15 @@
 @import "./movies";
 @import "./movie";
 
-body {
+*{
   margin: 0;
-  //background-color: #261a4e;
-  //background-image: url("../img/FW-edges-half-purple.jpg");
-  //background-size: cover;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  max-width: 100vw;
   background: linear-gradient(
     347deg,
     rgba(0, 164, 202, 1) 0%,
